@@ -1,0 +1,31 @@
+; ➤ Eleva tus habilidades de codificación con estos métodos de JavaScript imprescindibles
+; ↳ Maneja cadenas, matrices, matemáticas, fechas, JSON y promesas.
+; ↳ Estas herramientas son su boleto para un código más limpio y eficiente.
+
+; ➤ Métodos de cadena
+; ↳ slice(start, end) – Extrae una parte de una cadena.
+; ↳ replace(searchValue, newValue) – Reemplaza el texto especificado.
+; ↳ toLowerCase() & toUpperCase() – Cambiar mayúsculas y minúsculas.
+; ↳ includes(searchString) – Comprueba si hay una subcadena.
+; ↳ trim() – Elimina los espacios en blanco.
+; ↳ split(delimiter) – Convierte una cadena en una matriz.
+
+; ➤ Métodos de matriz
+; ↳ map(callback) – Transformar los elementos de la matriz.
+; ↳ filter(callback) – Filtra elementos en función de las condiciones.
+; ↳ forEach(callback) – Iterar sobre los elementos de la matriz.
+; ↳ find(callback) – Encuentra el primer elemento coincidente.
+; ↳ some(callback) & every(callback) – Condiciones de prueba entre elementos.
+
+; ➤ Métodos matemáticos
+; (por sus siglas en inglés) – Redondea al entero más cercano.
+; (en inglés) Math.floor(value) & Math.ceil(value) – Redondea hacia abajo o hacia arriba.
+; () Math.random() – Genera números aleatorios.
+; ↳ Math.max(... números) y Math.min(... números) – Encuentra los extremos.
+
+; ➤ Métodos de fecha
+; () – Crea un nuevo objeto de fecha.
+; () – Recupera el año.
+; ↳ getMonth() – Obtiene el mes (0-11).
+; ↳ toLocaleDateString() – Formato como una cadena legible.
+; ↳ getTime() – Obtiene una marca de tiempo en milisegundos.

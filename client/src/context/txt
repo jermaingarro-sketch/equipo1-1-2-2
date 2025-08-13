@@ -1,0 +1,157 @@
+
+    // useEffect(() => {
+    //     const checkLogin = async () => {
+    //         const cookies = Cookies.get();
+    //         if (!cookies.token) {
+    //             setIsAuthenticated(false);
+    //             setLoading(false);
+    //             return;
+    //         }
+
+    //         try {
+    //             const res = await verifyTokenRequest(cookies.token);
+    //             console.log(res);
+    //             if (!res.data) return setIsAuthenticated(false);
+    //             setIsAuthenticated(true);
+    //             setUser(res.data);
+    //             setLoading(false);
+    //         } catch (error) {
+    //             setIsAuthenticated(false);
+    //             setLoading(false);
+    //         }
+    //     };
+    //     checkLogin();
+    // }, []);
+
+    // const signout = async (user) => {
+    //     setIsAuthenticated(false);
+    //     setUser(null);
+    //     try {
+    //         await logoutRequest(user);
+    //         Cookies.remove("token");
+    //     } catch (error) {
+    //         console.error(error.response.data);
+    //     }
+    // }
+
+
+    // const signout = async () => {
+    //     setIsAuthenticated(false);
+    //     setUser(null);
+    //     try {
+    //         await logoutRequest();
+    //         Cookies.remove("token");
+
+    //         ;
+    //     } catch (error) {
+    //         console.error(error.response.data);
+    //     }
+    // }
+
+
+
+    // const signout = async () => {
+    //     Cookies.remove("token");
+    //     try {
+    //         await logoutRequest();
+    //         setUser(null);
+    //         setIsAuthenticated(false);
+    //         setLoading(false);
+
+    //     } catch (error) {
+    //         console.log(error)
+    //     }
+    // };
+
+    // const signout = async () => {
+    //     // Limpia el estado local antes de realizar la solicitud
+    //     setUser(null);
+    //     setIsAuthenticated(false);
+    //     setLoading(true); // Opcional: indica que se está procesando el cierre de sesión
+    
+    //     Cookies.remove("token");
+    
+    //     try {
+    //         await logoutRequest(); // Realiza la solicitud al servidor
+    //     } catch (error) {
+    //         console.error("Error al cerrar sesión:", error);
+    //     }
+    //         setLoading(false); // Asegúrate de que el estado de carga se actualice al final
+        
+    // };
+
+
+    // useEffect(() => {
+    //     const checkLogin = async () => {
+    //         const cookies = Cookies.get();
+    //         if (!cookies.token) {
+    //             setIsAuthenticated(false);
+    //             setLoading(false);
+    //             return;
+    //         }
+
+    //         try {
+    //             const res = await verifyTokenRequest(cookies.token);
+    //             console.log(res);
+    //             if (!res.data) return setIsAuthenticated(false);
+    //             setIsAuthenticated(true);
+    //             setUser(res.data);
+    //             setLoading(false);
+    //         } catch (error) {
+    //             setIsAuthenticated(false);
+    //             setLoading(false);
+    //         }
+    //     };
+    //     checkLogin();
+    // }, []);
+
+    // const signout = async (user) => {
+    //     setIsAuthenticated(false);
+    //     setUser(null);
+    //     try {
+    //         await logoutRequest(user);
+    //         Cookies.remove("token");
+    //     } catch (error) {
+    //         console.error(error.response.data);
+    //     }
+    // }
+
+
+    // const signout = async () => {
+    //     setIsAuthenticated(false);
+    //     setUser(null);
+    //     try {
+    //         await logoutRequest();
+    //         Cookies.remove("token");
+
+    //         ;
+    //     } catch (error) {
+    //         console.error(error.response.data);
+    //     }
+    // }
+
+const signin = (user) => {
+        loginRequest(user, (error, res) => {
+          if (error) {
+            setErrors(error.response.data);
+            console.error(error.response.data);
+          } else {
+            console.log(res);
+            setUser(res.data);
+            setIsAuthenticated(true, (err) => {
+              if (err) {
+                setErrors(err);
+                console.error(err);
+              } else {
+                setLoading(false, (err) => {
+                  if (err) {
+                    setErrors(err);
+                    console.error(err);
+                  }
+                  // Éxito total
+                });
+              }
+            });
+          }
+        });
+      };
