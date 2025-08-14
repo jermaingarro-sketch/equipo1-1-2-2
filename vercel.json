@@ -2,7 +2,7 @@
   "version": 3,
   "framework": "vite",
   "build": {
-    "dist": "client/dist",
+    "output": "client/dist",
     "command": "npm run build",
     "cwd": "client"
   },
