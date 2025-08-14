@@ -1,15 +1,15 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "client/vite.config.js",  
-      "use": "@vercel/vite"           
-    }
-  ],
+  "version": 3,
+  "framework": "vite",
+  "build": {
+    "dist": "client/dist",
+    "command": "npm run build",
+    "cwd": "client"
+  },
   "routes": [
     {
       "src": "/.*",
-      "dest": "client/dist/index.html" 
+      "dest": "client/dist/index.html"
     }
   ]
 }
